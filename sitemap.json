@@ -1,0 +1,7 @@
+{
+  "desc": " 深圳市思博创科技有限公司 ，Shenzhen Cybertron Technology Co.,Ltd，思博创，Cybertron，思博创官网，最后一公里数据感知，深度融合的场景化设计，嵌入式设计服务，数据中心分级监控管理系统，光电气体成像 (OGI)图像识别系统，电厂设备设备统一监控系统，用电监控管理系统，消防物联",
+  "rules": [{
+  "action": "allow",
+  "page": "*"
+  }]
+}

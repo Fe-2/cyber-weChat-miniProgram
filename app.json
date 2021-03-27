@@ -1,0 +1,46 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/alarm/alarm",
+    "pages/my/my"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#333",
+    "selectedColor": "#FF4D4D",
+    "backgroundColor": "#FFF",
+    "borderStyle": "white",
+    "position":"bottom",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "img/x.png",
+      "selectedIconPath": "img/x.png",
+      "text": "设备"
+    }, {
+      "pagePath": "pages/alarm/alarm",
+      "iconPath": "img/x.png",
+      "selectedIconPath": "img/x.png",
+      "text": "告警"
+    }, {
+      "pagePath": "pages/my/my",
+      "iconPath": "img/x.png",
+      "selectedIconPath": "img/x.png",
+      "text": "我的"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor":"#fff",
+    "navigationBarTitleText":"消防物联",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#e5e5e5"
+  },
+  "usingComponents": {},
+  "useExtendedLib": {
+    "weui": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
