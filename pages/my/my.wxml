@@ -1,0 +1,35 @@
+<!--my.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <view  wx:if="{{!hasUserInfo && canIUse}}"  class="get-info-box">
+      <button class="get-info">
+        <image class="default-avatar" src="../../img/x.png" mode="cover"></image>
+      </button>
+      <text class="tips">请先登录再进行操作</text>
+      <navigator class="get-info2" url="../../pages/login/login" open-type="navigate"><view>点击登录</view></navigator>
+    </view>
+    <view wx:else class="user">
+      <view class="avatar-box">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </view>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="userinfo-phone">{{userInfo.province}}</text>
+    </view>
+  </view>
+  <view class="manage">
+    <view class="device-info">
+      <view class="title">我的设备<navigator class="link-to" url="../../pages/index/index" open-type="switchTab"><view>查看全部<mp-icon class="icon" icon="arrow" color="#AAACB2" size="{{12}}"></mp-icon></view></navigator></view>
+      <view class="list">
+        <view class="list-item"><view class="num">_</view><view class="name">设备总数</view></view>
+        <view class="list-item"><view class="num">_</view><view class="name">烟感</view></view>
+        <view class="list-item"><view class="num">_</view><view class="name">电气火灾</view></view>
+        <view class="list-item"><view class="num">_</view><view class="name">消防栓</view></view>
+      </view>
+    </view>
+    <view class="set-info">
+      <view class="list"><image src="../../img/x.png"></image><view class="name">账号设置</view><view class="arrow"><mp-icon icon="arrow" color="black" size="{{14}}"></mp-icon></view></view>
+      <view class="list" bindtap="showCybertron"><image src="../../img/x.png"></image><view class="name">关于我们</view><view class="arrow"><mp-icon icon="arrow" color="black" size="{{14}}"></mp-icon>
+</view></view>
+    </view>
+  </view>
+</view>

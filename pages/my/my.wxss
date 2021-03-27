@@ -1,0 +1,172 @@
+.container {
+  background: #f6f6f6;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 48px;
+}
+.userinfo {
+  width: 100%;
+  height: 220px;
+  padding-top: 5px;
+  /* background: url(https://s3.ax1x.com/2020/12/24/rgdNzd.png)  no-repeat bottom center;
+  background-clip: content-box;
+  background-size: cover; */
+  background-color: #FF4D4D;
+  text-align: center;
+}
+.userinfo .user{
+  width: 50%;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.userinfo .get-info{
+  display: block;
+  padding: 0;
+  width: 64px;
+  height: 64px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 64px;
+  font-size: 14px;
+  border: 2px solid rgba(255,255,255,.3);
+  font-weight: 500;
+  color: #333;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.get-info .default-avatar{
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 8px auto;
+}
+.get-info-box .get-info2{
+  width: 88px;
+  height: 28px;
+  line-height: 28px;
+  color: #fff;
+  padding: 0;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  background-color: #FF4D4D;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 auto;
+}
+.get-info-box .tips{
+  display: block;
+  font-size: 12px;
+  color: #fff;
+  margin: 8px 0;
+}
+.avatar-box{
+  margin: 5px auto 15px auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 64px;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,.3);
+}
+.userinfo-avatar{
+  display: block;
+  width: 64px;
+  height: 64px;
+  transform: scale(1.05); 
+}
+.userinfo-nickname{
+  display: block;
+  color: #fff;
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+.userinfo-phone{
+  display: block;
+  color: #fff;
+  font-size: 14px;
+}
+.manage{
+  padding: 0 16px;
+  transform: translateY(-74px);
+}
+.manage .device-info{
+  height: 148px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.manage .device-info .title{
+  font-size: 16px;
+  height: 24px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.manage .device-info .title .link-to{
+  float: right;
+}
+.manage .device-info .title .link-to view{
+  float: right;
+  font-weight: 500;
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+  color:#AAACB2;
+}
+.manage .device-info .title .link-to view .icon{
+  margin-left: 5px;
+}
+.manage .device-info .list{
+  overflow: hidden;
+  margin-top: 15px;
+}
+.manage .device-info .list .list-item{
+  width: 25%;
+  float: left;
+}
+.manage .device-info .list .list-item view{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #8D9099;
+  height: 40px;
+  line-height: 40px;
+}
+.manage .set-info{
+  width: 100%;
+  height: 144px;
+  margin-top: 16px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding:0 16px;
+  box-sizing: border-box;
+}
+.manage .set-info .list{
+  width: 100%;
+  height: 72px;
+  line-height: 72px;
+}
+.manage .set-info .list image{
+  width: 48px;
+  height: 48px;
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.manage .set-info .list .name, .manage .set-info .list .arrow{
+  margin-left: 12px;
+  font-weight: bold;
+  width: 72px;
+  height: 72px;
+  line-height: 72px;
+  color: #000;
+  float: left;
+}
+.manage .set-info .list .arrow{
+  float: right;
+  text-align: right;
+}

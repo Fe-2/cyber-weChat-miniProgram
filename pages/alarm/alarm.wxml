@@ -1,0 +1,28 @@
+<!--device.wxml-->
+<view class="container">
+  <view class="device-list">
+    <view class="title-sec">常用设备</view>
+    <scroll-view class="list" 
+    refresher-triggered="{{triggered}}"
+    refresher-threshold="100"
+    upper-threshold="120"
+    bindrefresherrefresh="refresh" 
+    refresher-enabled="true" 
+    enhanced="true" 
+    bounces="true" 
+    show-scrollbar="false" 
+    fast-deceleration="false" 
+    scroll-with-animation="true" 
+    scroll-y="true">
+      <view class="item" wx:for="{{deviceList}}" wx:key="name" data-index="{{index}}" data-status="{{item.status}}" bindtap="changeStatus">
+        <image class="device-logo" src="https://www.cyber-tron.com/wechat/x.png" alt="" />
+        <view class="device-info">
+          <view class="name">{{item.name}}</view>
+          <view class="position">{{item.position}}</view>
+        </view>
+        <image wx:if="{{item.status}}" class="device-status" src="https://www.cyber-tron.com/wechat/x.png" alt="" />
+        <image wx:else class="device-status" style="width:30px;height:10px;top:54%" src="https://www.cyber-tron.com/wechat/x.png" alt="" />
+      </view>
+        </scroll-view>
+  </view>
+</view>

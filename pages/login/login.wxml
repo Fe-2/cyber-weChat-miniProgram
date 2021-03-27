@@ -1,0 +1,23 @@
+<!--login.wxml-->
+<view class="container">
+  <view wx:if="{{step === 1}}" class="login-type">
+    <image src="../../img/x.png"></image>
+    <view class="tips">请先登录再进行操作</view>
+    <view class="choose">
+      <button>账户登录</button>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信登录</button>
+      <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信登录</button> -->
+      <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">手机号码</button> -->
+    </view>
+  </view>
+  <view wx:elif="{{step === 2}}" class="login-type authorize">
+    <image src="../../img/x.png"></image>
+    <view class="tips">使用前请授权微信用户头像、昵称</view>
+    <view class="choose">
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button>
+    </view>
+    <view class="choose reject">
+      <navigator class="nav" url="../../pages/my/my" open-type="switchTab">拒绝</navigator>
+    </view>
+  </view>
+</view>

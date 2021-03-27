@@ -1,0 +1,95 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="position-title">
+    <view class="main-title">暂无位置信息<mp-icon extClass="arrow-down" icon="arrow" color="black" size="{{14}}"></mp-icon></view>
+    <view class="sec-title">******</view>
+    <view class="open-type" data-type="showSerialSheet" bindtap="openSheet"><mp-icon extClass="add-open" icon="add" color="#fff" size="{{24}}"></mp-icon></view>
+  </view>
+  <view class="page">
+    <view class="choose-type" data-type="showTagSheet" bindtap="openSheet">
+      <mp-icon icon="tag" color="black" size="{{24}}"></mp-icon>
+    </view>
+    <mp-tabs 
+    class="tabs-box"
+    tabClass="tabs-head"
+    tabs="{{tabs}}" 
+    activeTab="{{activeTab}}" 
+    swiperClass="weui-tabs-swiper"
+    bindtabclick="onTabClick"
+    bindchange="onChange"
+    activeClass="tab-bar-title__selected">
+    <block wx:for="{{tabs}}" wx:key="title">
+      <view class="tab-content" data-set="{{item}}" slot="tab-content-{{index}}" bind:tap="handleClick" >
+        <view class="device-list">
+          <scroll-view class="list" 
+          style="height:100%"
+          bounces="false"
+          enhanced="true"
+          show-scrollbar="true"
+          fast-deceleration="false" 
+          scroll-with-animation="true" 
+          scroll-y="true">
+            <view class="inner-list">
+              <view class="item-list">
+                <view class="device-item" wx:for="{{deviceList}}" wx:if="{{index % 2 === 0}}" wx:key="index" data-index="{{index}}" data-status="{{item.status}}" bindtap="changeStatus">
+                  <view class="img">
+                    <image src="https://www.cyber-tron.com/wechat/x.png"></image>
+                    <view class="status">在线</view>
+                  </view>
+                  <view class="info">
+                    <view class="name">{{item.name}}</view>
+                    <view class="handle" wx:if="{{item.type === 1}}">
+                      <view class="handle-name">已消音</view>
+                      <view  class="btn"><mp-icon icon="bellring-off" color="#AAACB2" size="{{20}}"></mp-icon></view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="item-list">
+                <view class="device-item" wx:for="{{deviceList}}" wx:if="{{index % 2 !== 0}}" wx:key="index" data-index="{{index}}" data-status="{{item.status}}" bindtap="changeStatus">
+                  <view class="img">
+                    <image src="https://www.cyber-tron.com/wechat/x.png"></image>
+                    <view class="status">在线</view>
+                  </view>
+                  <view class="info">
+                    <view class="name">{{item.name}}</view>
+                    <view class="handle" wx:if="{{item.type === 1}}">
+                      <view class="handle-name">已消音</view>
+                      <view class="btn"><mp-icon icon="bellring-off" color="#AAACB2" size="{{20}}"></mp-icon></view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            </scroll-view>
+        </view>
+      </view>
+    </block>
+  </mp-tabs>
+  </view>
+  <mp-actionSheet bindactiontap="serialChoose" data-type="showSerialSheet" bindclose="closeSheet" show="{{showSerialSheet}}" actions="{{serialGroups}}">
+  </mp-actionSheet>
+  <mp-actionSheet bindactiontap="tagChoose" data-type="showTagSheet" bindclose="closeSheet" show="{{showTagSheet}}" actions="{{tagGroups}}">
+  </mp-actionSheet>
+  <mp-half-screen-dialog 
+  extClass="filtrate-box"
+  title="筛选"
+  show="{{showFiltrateBox}}"
+  bindclose="closeFiltrateBox"
+  maskClosable="{{true}}">
+  <view slot="desc">
+    <view class="list">
+      <view class="list-item">
+        <view class="title">运行状态</view>
+        <view class="type-list">
+          <view class="type-item">异常</view>
+        </view>
+      </view>
+    </view>
+    <view class="btn">
+      <view>重置</view>
+      <view>确定</view>
+    </view>
+  </view>
+  </mp-half-screen-dialog>
+</view>
